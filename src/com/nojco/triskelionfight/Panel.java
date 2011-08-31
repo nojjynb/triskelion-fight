@@ -12,13 +12,18 @@ import android.widget.Toast;
 
 class Panel extends SurfaceView implements SurfaceHolder.Callback {
 	private CanvasThread canvasthread;
+	private Context context;
+	private ClickableBitmap clickableBitmap;
 	
-    public Panel(Context context) {
-		super(context);
+    public Panel(Context c) {
+		super(c);
+		context = c;
 		// TODO Auto-generated constructor stub
 	    getHolder().addCallback(this);
 	    canvasthread = new CanvasThread(getHolder(), this);
 	    setFocusable(true);
+
+	    
 	}
     public Panel(Context context, AttributeSet attrs) {
 	        super(context, attrs);
@@ -59,6 +64,13 @@ class Panel extends SurfaceView implements SurfaceHolder.Callback {
 	
 	@Override
     public void onDraw(Canvas canvas) {
+
+		Paint paint = new Paint();
+		clickableBitmap = new ClickableBitmap(context, R.drawable.background, R.drawable.background_clickable);
+        //clickableBitmap.frame.draw(canvas);
+        //canvas.drawBitmap(clickableBitmap.icon, clickableBitmap.lp.x, clickableBitmap.lp.y, null);
+        
+        /*
 		Paint paint = new Paint();
 		paint.setColor(Color.RED);
 		canvas.drawColor(Color.BLUE);
@@ -91,7 +103,7 @@ class Panel extends SurfaceView implements SurfaceHolder.Callback {
         //innerRing.offset(dx+15, dy+15);
 		//paint.setColor(Color.GREEN);
         //canvas.drawPath(innerRing, paint);
-        
+         */        
            
     }
 }
