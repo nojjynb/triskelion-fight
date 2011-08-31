@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:id="@+id/L"
     >
     <!--  <com.nojco.triskelionfight.Panel android:id="@+id/SurfaceView01" android:maxHeight="40dip" android:layout_height="fill_parent" android:layout_width="fill_parent">
 </com.nojco.triskelionfight.Panel>
@@ -11,4 +12,5 @@
     <FrameLayout android:id="@+id/frameLayout" android:layout_height="fill_parent" android:layout_width="fill_parent"></FrameLayout>
 
  -->
+    <Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:clickable="true" android:maxHeight="20px" android:height="20px" android:text="Start/Stop"></Button>
 </LinearLayout>
