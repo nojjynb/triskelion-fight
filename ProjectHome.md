@@ -1,0 +1,1 @@
+This is a simple tap game loosely based on The Gamers of Triskelion from Star Trek.
